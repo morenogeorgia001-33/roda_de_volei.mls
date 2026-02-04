@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Roda de Vôlei – Marlene Leite da Silva</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body {
+      background: #0f0f0f;
+      color: #f2f2f2;
+      line-height: 1.6;
+    }
+
+    header {
+      background: linear-gradient(135deg, #ff7a00, #ffb347);
+      padding: 30px 20px;
+      text-align: center;
+    }
+
+    header img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 15px;
+      border: 3px solid rgba(0,0,0,0.2);
+    }
+
+    header h1 {
+      font-size: 1.8rem;
+      font-weight: bold;
+    }
+
+    header p {
+      margin-top: 6px;
+      font-size: 1rem;
+    }
+
+    section {
+      padding: 30px 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    h2 {
+      margin-bottom: 15px;
+      font-size: 1.4rem;
+      border-left: 4px solid #ff7a00;
+      padding-left: 10px;
+    }
+
+    .aviso {
+      background: #1c1c1c;
+      border: 1px solid #333;
+      padding: 15px;
+      border-radius: 8px;
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .aviso strong {
+      color: #ffb347;
+    }
+
+    .galeria {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 12px;
+      margin-top: 20px;
+    }
+
+    .galeria div {
+      background: #222;
+      height: 140px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #777;
+      font-size: 0.9rem;
+      border-radius: 8px;
+    }
+
+    .cta {
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    .cta button {
+      background: #ff7a00;
+      border: none;
+      padding: 14px 28px;
+      font-size: 1rem;
+      color: #000;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: 0.3s;
+      margin: 8px;
+    }
+
+    .cta button:hover {
+      background: #ffb347;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 0.85rem;
+      color: #aaa;
+      border-top: 1px solid #222;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <img src="logo.png" alt="Logo Roda de Vôlei Marlene">
+    <h1>Roda de Vôlei</h1>
+    <p>E.E. Marlene Leite da Silva</p>
+  </header>
+
+  <section>
+    <h2>Sobre</h2>
+    <p>
+      A roda de vôlei da E.E. Marlene Leite da Silva é uma tradição construída
+      pelos alunos ao longo dos anos.
+    </p>
+    <p>
+      É um espaço livre, aberto e contínuo. Chegou, entrou, jogou.
+    </p>
+
+    <div class="aviso" id="avisoRoda">
+      <strong>Status:</strong> carregando...
+    </div>
+  </section>
+
+  <section>
+    <h2>Galeria</h2>
+    <div class="galeria">
+      <div>Foto 1</div>
+      <div>Foto 2</div>
+      <div>Foto 3</div>
+      <div>Foto 4</div>
+    </div>
+  </section>
+
+  <section class="cta">
+    <h2>Participar</h2>
+    <button onclick="mostrarMensagem()">Como funciona</button>
+    <button onclick="irInstagram()">Instagram</button>
+  </section>
+
+  <footer>
+    Tradição da roda de vôlei • Marlene Leite da Silva
+  </footer>
+
+  <script>
+    const aviso = document.getElementById("avisoRoda");
+    const rodaAtiva = true; // altere quando quiser
+
+    aviso.innerHTML = rodaAtiva
+      ? "<strong>Status:</strong> Hoje tem roda de vôlei."
+      : "<strong>Status:</strong> Sem roda hoje.";
+
+    function mostrarMensagem() {
+      alert(
+        "A roda é livre.\n\n" +
+        "Não precisa se inscrever.\n" +
+        "Não precisa ser experiente.\n\n" +
+        "Chegou, entrou, jogou."
+      );
+    }
+
+    function irInstagram() {
+      window.open("https://www.instagram.com/roda_de_volei.mls/", "_blank");
+    }
+  </script>
+
+</body>
+      </html>
