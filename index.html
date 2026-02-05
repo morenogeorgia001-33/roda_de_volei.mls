@@ -96,11 +96,13 @@
     }
 
     .galeria.galeria-scroll {
-  display: flex;              /* sobrescreve o grid */
-  overflow-x: auto;
+  display: flex;
   gap: 12px;
-  padding-bottom: 10px;
-}
+  overflow-x: auto;
+  padding-left: 20px;     /* COMPENSA o padding da section */
+  padding-right: 20px;
+  box-sizing: border-box;
+    }
 
 .galeria.galeria-scroll > div {
   flex: 0 0 140px;             /* largura fixa */
