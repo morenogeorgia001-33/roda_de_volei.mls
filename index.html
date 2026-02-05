@@ -92,23 +92,27 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 8px;
+  display: block;
     }
 
-    .galeria-scroll {
-  display: flex;
-  gap: 12px;
+    .galeria.galeria-scroll {
+  display: flex;              /* sobrescreve o grid */
   overflow-x: auto;
+  gap: 12px;
   padding-bottom: 10px;
-  scroll-snap-type: x mandatory;
 }
 
-.galeria-scroll > div {
-  flex: 0 0 auto;
-  width: 140px;
+.galeria.galeria-scroll > div {
+  flex: 0 0 140px;             /* largura fixa */
   height: 140px;
-  scroll-snap-align: start;
+  background: #222;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+
+
 
     .cta {
       text-align: center;
