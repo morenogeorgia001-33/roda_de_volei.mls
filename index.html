@@ -70,6 +70,37 @@
       color: #ffb347;
     }
 
+    /* Wrapper só para o scroll */
+.galeria-wrapper {
+  overflow-x: auto;
+  margin-left: -20px;
+  margin-right: -20px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+/* Galeria vira flex só dentro do wrapper pelo amor de Deus*/
+.galeria-wrapper .galeria {
+  display: flex;
+  gap: 12px;
+}
+
+/* Cada item */
+.galeria-wrapper .galeria > div {
+  flex: 0 0 140px;
+  height: 140px;
+  background: #222;
+  border-radius: 8px;
+}
+
+/* Imagem */
+.galeria img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
     .galeria {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
@@ -188,16 +219,16 @@
     <div class="galeria">
 
 
-      <div class="galeria galeria-scroll">
-  <div><img src="20260205_011456_0000.png" alt=""></div>  
-  <div><img src="20260205_013435_0000.png" alt=""></div>
-  <div><img src="20260205_020345_0000.png" alt=""></div>
-  <div><img src="20260205_021218_0000.png" alt=""></div>
+      <div class="galeria-wrapper">
+
+  <div class="galeria">
+    <div><img src="20260205_011456_0000.png"></div>  
+    <div><img src="20260205_013435_0000.png"></div>
+    <div><img src="20260205_020345_0000.png"></div>
+    <div><img src="20260205_021218_0000.png"></div>
+  </div>
 
       </div>
-  
-  
-     </div>
     
   </section>
 
