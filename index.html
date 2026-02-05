@@ -95,6 +95,21 @@
   border-radius: 8px;
     }
 
+    .galeria-scroll {
+  display: flex;
+  gap: 12px;
+  overflow-x: auto;
+  padding-bottom: 10px;
+  scroll-snap-type: x mandatory;
+}
+
+.galeria-scroll > div {
+  flex: 0 0 auto;
+  width: 140px;
+  height: 140px;
+  scroll-snap-align: start;
+}
+
     .cta {
       text-align: center;
       margin-top: 40px;
@@ -158,10 +173,15 @@
     <p class="peq"></p>
     
     <div class="galeria">
+
+
+      <div class="galeria galeria-scroll">
   <div><img src="20260205_011456_0000.png" alt=""></div>  
   <div><img src="20260205_013435_0000.png" alt=""></div>
   <div><img src="20260205_020345_0000.png" alt=""></div>
   <div><img src="20260205_021218_0000.png" alt=""></div>
+
+      </div>
   
   
      </div>
