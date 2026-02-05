@@ -186,6 +186,41 @@
       color: #aaa;
       border-top: 1px solid #222;
     }
+
+    /* Wrapper só para scroll horizontal */
+.galeria-wrapper {
+  overflow-x: auto;
+  margin-left: -20px;   /* compensa padding da section */
+  margin-right: -20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  box-sizing: border-box;
+}
+
+/* Galeria dentro do wrapper vira flex */
+.galeria-wrapper .galeria {
+  display: flex;
+  gap: 12px;
+}
+
+/* Cada item da galeria */
+.galeria-wrapper .galeria > div {
+  flex: 0 0 140px;  /* largura fixa */
+  height: 140px;
+  background: #222;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Imagens da galeria */
+.galeria img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
   </style>
 </head>
 
@@ -213,23 +248,18 @@
   </section>
 
   <section>
-    <h2>Galeria</h2>
-    <p class="peq"></p>
-    
+  <h2>Galeria</h2>
+  <p class="peq"></p>
+
+  <div class="galeria-wrapper">
     <div class="galeria">
-
-
-      <div class="galeria-wrapper">
-
-  <div class="galeria">
-    <div><img src="20260205_011456_0000.png"></div>  
-    <div><img src="20260205_013435_0000.png"></div>
-    <div><img src="20260205_020345_0000.png"></div>
-    <div><img src="20260205_021218_0000.png"></div>
+      <div><img src="20260205_011456_0000.png" alt=""></div>
+      <div><img src="20260205_013435_0000.png" alt=""></div>
+      <div><img src="20260205_020345_0000.png" alt=""></div>
+      <div><img src="20260205_021218_0000.png" alt=""></div>
+    </div>
   </div>
 
-      </div>
-    
   </section>
 
   <section class="cta">
