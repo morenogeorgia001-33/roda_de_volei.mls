@@ -249,6 +249,22 @@ Chegou, entrou, jogou. Mais que vôlei, é convivência, movimento e continuidad
   Tradição da roda de vôlei • Marlene Leite da Silva 2026
 </footer>
 
+
+<div id="modalComoFunciona" class="lightbox">
+  <div style="background:#111;padding:25px;border-radius:10px;max-width:320px;text-align:center">
+    <h2 style="margin-bottom:10px">Como funciona</h2>
+    <p style="font-size:0.95rem">
+      A roda é livre.<br><br>
+      Não precisa de experiência.<br>
+      Chegou, entrou, jogou.
+    </p>
+    <button onclick="fecharModal()" style="margin-top:15px;padding:8px 20px;border:none;border-radius:20px;background:#ff7a00;cursor:pointer">
+      Fechar
+    </button>
+  </div>
+</div>
+
+
 <script>
   const aviso = document.getElementById("avisoRoda");
   const rodaAtiva = false;
@@ -284,9 +300,19 @@ Chegou, entrou, jogou. Mais que vôlei, é convivência, movimento e continuidad
     if (e.target === lightbox) lightbox.style.display = "none";
   };
 
-  document.getElementById("comoFunciona").onclick = () => {
-    alert("A roda é livre.\n\nNão precisa de experiência.\nChegou, entrou, jogou.");
-  };
+  const modal = document.getElementById("modalComoFunciona");
+
+document.getElementById("comoFunciona").onclick = () => {
+  modal.style.display = "flex";
+};
+
+function fecharModal() {
+  modal.style.display = "none";
+}
+
+modal.onclick = e => {
+  if (e.target === modal) modal.style.display = "none";
+};
 
   document.getElementById("instagram").onclick = () => {
     window.open("https://www.instagram.com/roda_de_volei.mls/", "_blank");
