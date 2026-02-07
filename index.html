@@ -175,6 +175,45 @@
       color: #aaa;
       border-top: 1px solid #222;
     }
+
+
+
+/* Efeito de clique  geral todos os botões feitos até agora*/
+button,
+.nav-buttons button {
+  transition: transform 0.15s ease, box-shadow 0.15s ease, opacity 0.15s ease;
+}
+
+/* Clique (pressão) */
+button:active,
+.nav-buttons button:active {
+  transform: scale(0.92);
+  opacity: 0.85;
+}
+
+/* Hover suave */
+button:hover,
+.nav-buttons button:hover {
+  box-shadow: 0 6px 16px rgba(0,0,0,0.4);
+}
+
+/* Botões CTA (Instagram e Como funciona) */
+.cta button {
+  font-weight: bold;
+}
+
+.cta button:active {
+  box-shadow: inset 0 4px 8px rgba(0,0,0,0.4);
+}
+
+/* Setas da galeria */
+.nav-buttons button {
+  transition: transform 0.12s ease, background 0.12s ease;
+}
+
+.nav-buttons button:hover {
+  background: rgba(0,0,0,0.7);
+}
   </style>
 </head>
 
